@@ -68,7 +68,7 @@ val task = for {
   done <- Printer.printDocument(someDoc).recoverWith { case t: PartialPrintException => for {
     percent <- Printer.getValue("how much was printed?")
     error <- Printer.task(_ => Future.failed(new PartialPrintException(s"Printed $percent%")))
-  }
+  } yield error
 } yield done
 
 /**
