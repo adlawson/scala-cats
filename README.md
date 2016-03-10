@@ -40,7 +40,7 @@ object Printer {
   def task[A](f: Broker => Future[A])(implicit ec: ExecutionContext): Task[A] = Kleisli(f)
 
   def getValue(key: String)(implicit ec: ExecutionContext): Task[Int] =
-    task(_.request[Option])(s"value command here with $key")
+    task(_.request[Int])(s"value command here with $key")
 
   def loadPage()(implicit ec: ExecutionContext): Task[Unit] =
     task(_.publish("load command here"))
