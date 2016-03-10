@@ -1,9 +1,7 @@
 lazy val cats = (project in file("."))
-  //.enablePlugins(GitVersioning)
   .settings(
     organization := "com.adlawson",
     name := "cats",
-    version := "1.0.0-SNAPSHOT",
     scalaVersion := "2.11.7",
     scalacOptions ++= Seq(
       "-encoding", "UTF-8",
