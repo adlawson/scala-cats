@@ -1,5 +1,7 @@
 # Cats extended
 
+<img src="https://twistedsifter.files.wordpress.com/2014/05/longcat-hug-gif-remix-reddit-funny-6.gif?w=220&h=280" align="right"/>
+
 [![Master branch build status][ico-build]][travis]
 
 This library adds useful extensions to the [typelevel/cats][cats] library.
